@@ -1,0 +1,155 @@
+.products {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &__title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    h2 {
+      font-size: 25px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin: 0;
+      padding-top: 25px;
+    }
+  }
+
+  &__main {
+    margin-top: 25px;
+    border: 2px solid #8c60eb;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__value {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #8c60eb;
+
+      span {
+        padding: 15px;
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:nth-child(5) {
+          max-width: 300px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__product {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid #8c60eb;
+      align-items: center;
+
+      a {
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+        margin: 0;
+        padding: 15px;
+
+      }
+
+      p {
+        width: 100%;
+        height: auto;
+        min-height: 50px;
+        max-width: 100px;
+        margin: 0;
+        padding: 15px;
+        font-size: 16px;
+
+        &:nth-child(5) {
+          width: auto;
+          max-width: 300px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__total-price {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin: 25px 0;
+
+      h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 60px 0 25px 0;
+      }
+
+      span {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+.positions {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-icon {
+  cursor: pointer;
+
+  i {
+    font-size: 40px;
+    color: #8c60eb;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .products {
+    &__title {
+      h2 {
+        font-size: 18px;
+      }
+    }
+
+    &__main {
+      &__value {
+        span {
+          font-size: 14px;
+          padding: 0 5px;
+        }
+      }
+
+      &__product {
+
+        p {
+          padding: 0 10px 0 0;
+          font-size: 14px;
+        }
+      }
+
+      &__total-price {
+        h2 {
+          margin: 0 0 25px 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

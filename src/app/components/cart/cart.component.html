@@ -1,0 +1,41 @@
+<div class="products">
+  <div class="container">
+    <div class="products__title">
+      <h2>Cart</h2>
+    </div>
+    <div class="products__main">
+      <div class="row">
+        <div class="products__main__value col-12">
+          <span>Option</span>
+          <span>Id</span>
+          <span>Name</span>
+          <span>Price</span>
+          <span>Label</span>
+          <span>Sub Total</span>
+        </div>
+      </div>
+      <div class="row positions">
+        <div class="products__main__product col-12" *ngFor="let item of items">
+          <a (click)="remove(item.product.id)">
+            <mat-icon>
+              <i class="material-icons">
+                delete_forever
+              </i>
+            </mat-icon>
+          </a>
+          <p>{{item.product.id}}</p>
+          <p>{{item.product.name}}</p>
+          <p>{{item.product.price}}$</p>
+          <p>{{item.product.label}}</p>
+          <p>{{item.product.price * item.quantity}}$</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="products__main__total-price col-12">
+          <h2>Total Price</h2>
+          <span>{{total}}$</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

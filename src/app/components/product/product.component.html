@@ -1,0 +1,23 @@
+<div class="home-list">
+  <div class="container">
+    <div class="home-list__title">
+      <h2>Product List</h2>
+    </div>
+    <div class="home-list__main">
+      <div class="home-list__main__value">
+        <span>Id</span>
+        <span>Name</span>
+        <span>Price</span>
+        <span>Label</span>
+        <span>By</span>
+      </div>
+      <div class="home-list__main__data" *ngFor="let product of products">
+        <p>{{product.id}}</p>
+        <p>{{product.name}}</p>
+        <p>{{product.price}}$</p>
+        <p>{{product.label}}</p>
+        <a [routerLink]="['/cart', { id:product.id }]">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>
